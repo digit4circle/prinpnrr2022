@@ -4,59 +4,155 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PRIN PNRR Digit4Circle</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f6f5;
+      color: #333;
+    }
+    header {
+      background-color: #00695c;
+      color: #ffffff;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    nav {
+      text-align: center;
+      margin: 1rem 0;
+    }
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #00695c;
+      font-weight: bold;
+    }
+    section {
+      padding: 2rem;
+      background-color: #f0f6f5;
+      margin: 1rem auto;
+      max-width: 1000px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #2e7d32;
+      border-bottom: 2px solid #00695c;
+      padding-bottom: 0.5rem;
+    }
+    footer {
+      background-color: #2e7d32;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+    footer img {
+      width: 100%;
+      max-width: 800px;
+      height: auto;
+      margin-bottom: 1rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #concept {
+      float: left;
+      margin: 0 20px 20px 0;
+      max-width: 300px;
+      height: auto;
+    }
+    @media (max-width: 768px) {
+      #concept {
+        float: none !important;
+        display: block;
+        margin: 0 auto 1rem auto !important;
+      }
+    }
+    details[open] summary::after {
+      content: "▲";
+      float: right;
+    }
+    details summary::after {
+      content: "▼";
+      float: right;
+    }
+    summary {
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
 </head>
-<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #333;">
-  <header style="background-color: #00695c; color: white; padding: 2rem 1rem; text-align: center;">
-    <h1>DIGIT4CIRCLE</h1>
+<body>
+  <header>
+    <img src="pnrr_logo.png" alt="PNRR Banner"
+         style="width: 100%; max-width: 1000px; height: auto; margin: 0 auto 1rem auto; display: block;">
+    <h1>PRIN PNRR 2022 Digit4Circle</h1>
     <p>DIGItal Twins for CIRCuLar Economy (DIGIT4Circle)</p>
   </header>
 
-  <nav style="text-align: center; margin: 1rem 0;">
-    <a href="#about" style="margin: 0 1rem; text-decoration: none; color: #00695c;">About</a>
-    <a href="#architecture" style="margin: 0 1rem; text-decoration: none; color: #00695c;">Architecture</a>
-    <a href="#innovations" style="margin: 0 1rem; text-decoration: none; color: #00695c;">Innovations</a>
-    <a href="#collaborate" style="margin: 0 1rem; text-decoration: none; color: #00695c;">Collaborate</a>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#architecture">Architecture</a>
+    <a href="#innovations">Innovations</a>
+    <a href="#publications">Publications</a>
   </nav>
 
-  <section id="about" style="padding: 2rem; background-color: white; margin: 1rem auto; max-width: 1000px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+  <section id="about">
     <h2>About the Project</h2>
-    <p>
-      DIGIT4CIRCLE introduces a dynamic middleware architecture and digital twin models to connect application islands and optimize circular production processes. The project enables intelligent feedback, MLOps integration, and secure data exchange for more sustainable industrial ecosystems.
+    <img id="concept" src="digit4circle_concept.png" alt="Digit4Circle">
+    <p style="text-align: justify; line-height: 1.6;">
+      Digit4Circle advocates for a middleware architecture to federate domain-specific application islands and a DT model that can be applied to circular economy settings. In specific, the architecture itself combines different levels of applications of different domains of information technologies, aiming to: (i) develop a virtualized platform and mechanisms allowing the on-demand federation of resources (e.g., production units so to accomplish the process goals) and convergence of digitized models to represent the distributed production process. Dynamicity is an essential feature, allowing for potential adaptations of the processes, relying on localized intelligent feedback; (ii) design an integrated data pipeline and MLOPs practices used to establish possible product recycling and/or reuse, capable of providing predictive and prescriptive receipts, triggering potential process adaptations at runtime. To this end, we will also explore distributed machine learning techniques for the classification of functional behaviours, and detection of anomalies inside the production cycle, also allowing for portability and scalability; and (iii) design a solution for the exchange of information across the different domains involved, which may be structural entities of different kinds (users/customers and producers) as well as multiple ownerships. This requires the creation of a secure dataspace with specific privacy-ensuring techniques to enable a seamless exchange of information and incentivize the adoption of the proposed techniques.
     </p>
-    <img src="digit4circle_concept.png" alt="Digit4Circle" style="width: 100%; max-width: 600px; display: block; margin: 2rem auto; border: 1px solid #ccc; border-radius: 8px;" />
+
+    <p style="text-align: justify; line-height: 1.6;">
+      Given this context, the teams have proactively addressed the primary innovation pillars from the outset, focusing on key building blocks that holistically encompass all the identified innovation objectives. Their work has ensured a coherent and comprehensive approach to tackling these challenges. Specifically, during Q3, the group concentrated on refining and expanding upon earlier design decisions, enhancing the functionality and robustness of the developed framework and mechanisms. This phase of work particularly emphasized the following areas: (i) Architecture Design and Resource Cooperation Mechanisms: efforts were dedicated to optimizing system architecture and enabling efficient, seamless collaboration across diverse resources; (ii) Secure Data Ecosystems and Federated Unlearning: the team prioritized developing secure ecosystems for data sharing, coupled with advanced techniques for federated unlearning to enhance privacy and adaptability; and (iii) Data Acquisition Procedures: concerning the efficient, decentralized & cooperative data gathering procedures enacted in order to acquire visibility on the (production) process, and more generally a monitored phenomenon. Additional details on the activities and (planned) scientific output during this Q3 are provided throughout this document.
+    </p>
   </section>
 
-  <section id="architecture" style="padding: 2rem; background-color: white; margin: 1rem auto; max-width: 1000px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+  <section id="architecture">
     <h2>Architecture Overview</h2>
-    <p>
-      The architecture integrates domain-specific applications through:
-      <ul>
-        <li>On-demand federation of production resources</li>
-        <li>Convergence of digital twins for distributed process representation</li>
-        <li>Dynamic feedback and adaptation via localized intelligence</li>
-      </ul>
-    </p>
+
   </section>
 
-  <section id="innovations" style="padding: 2rem; background-color: white; margin: 1rem auto; max-width: 1000px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+  <section id="innovations">
     <h2>Key Innovations</h2>
-    <div style="display: flex; flex-direction: column; gap: 1.5rem;">
-      <div style="background-color: #e0f2f1; padding: 1rem; border-radius: 5px;">
-        <h3>Dynamic Resource Federation</h3>
-        <p>Virtualized environments align distributed production units to process goals.</p>
-      </div>
-      <div style="background-color: #e0f2f1; padding: 1rem; border-radius: 5px;">
-        <h3>Intelligent Data Pipelines</h3>
-        <p>Integration of MLOps for predictive analytics, reuse potential, and process adaptation.</p>
-      </div>
-      <div style="background-color: #e0f2f1; padding: 1rem; border-radius: 5px;">
-        <h3>Secure Cross-Domain Data Exchange</h3>
-        <p>Privacy-preserving dataspaces for seamless, incentivized collaboration across stakeholders.</p>
-      </div>
-    </div>
+
+    <details style="background-color: #e0f2f1; padding: 1rem; border-radius: 5px; margin-bottom: 1rem;">
+      <summary>Dynamic Resource Federation</summary>
+      <p style="margin-top: 1rem;">
+        Virtualized environments align distributed production units to process goals.
+      </p>
+    </details>
+
+    <details style="background-color: #e0f2f1; padding: 1rem; border-radius: 5px; margin-bottom: 1rem;">
+      <summary>Intelligent Data Pipelines</summary>
+      <p style="margin-top: 1rem;">
+        Integration of MLOps for predictive analytics, reuse potential, and process adaptation.
+      </p>
+    </details>
+
+    <details style="background-color: #e0f2f1; padding: 1rem; border-radius: 5px;">
+      <summary>Secure Cross-Domain Data Exchange</summary>
+      <p style="margin-top: 1rem;">
+        Privacy-preserving dataspaces for seamless, incentivized collaboration across stakeholders.
+      </p>
+    </details>
   </section>
 
-  <footer style="background-color: #004d40; color: white; text-align: center; padding: 1rem; margin-top: 2rem;">
+  <section id="publications">
+    <h2>Internatinal Peer-reviewed Publications</h2>
+    <ul>
+      <li>#1</li>
+      <li>#2</li>
+      <li>...</li>
+    </ul>
+  </section>
+  
+  <footer>
+    <img src="pnrr_logo.png" alt="PNRR Banner">
     <p>&copy; PRIN PNRR Digit4Circle (CUP: P2022788KK) funded under the Italian National Recovery and Resilience Plan (NRRP)</p>
   </footer>
 </body>
